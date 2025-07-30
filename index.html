@@ -1,68 +1,168 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lauren Leppert | QA Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Lauren Leppert – QA Engineer, freelance tester, and up-and-coming indie dev. Available for contract QA work.">
-  <script src="theme.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lauren Leppert Portfolio</title>
+  <!-- Font Awesome for icons (CDN link) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" />
+  <!-- Google Fonts (example fonts for headings/body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <!-- Navigation Bar (fixed at top) -->
+  <nav>
+    <!-- Logo / Brand Name -->
+    <div class="logo">Lauren Leppert<!-- Placeholder for logo image or text --></div>
+    <!-- Hamburger Menu Toggle (shown on mobile) -->
+    <button class="menu-toggle" aria-label="Open menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- Resume opens external site (LinkedIn for now) -->
+      <li><a href="https://www.linkedin.com/in/lauren-leppert-qa" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home">
     <h1>Lauren Leppert</h1>
-    <p class="tagline">QA Engineer • Chaos Wrangler • Coaster Nerd</p>
-    <button id="theme-toggle">Toggle Dark Mode</button>
+    <p class="tagline">
+       QA Engineer &bull; Automation Specialist &bull; Roller Coaster Enthusiast &ndash;
+      <span class="availability">Available for Freelance Work</span>
+    </p>
+    <a href="#contact" class="cta-button">Let’s Work Together</a>
+    <!-- Roller coaster graphic could be added here for decoration -->
+    <!-- <img src="images/coaster.svg" alt="roller coaster graphic" class="coaster-graphic"> -->
   </header>
 
+  <!-- About Me Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I’m Lauren, ex-tech-cubicle escapee turned coaster junkie, part-time bartender, and freelance QA wizard. I’ve spent years elbow deep in software testing; building, breaking, and fixing automation scripts. Now I split my time between passion projects, contract QA work, and serving up booze and smiles.
-    </p>
-    <br>
-    <p>
-      I don’t just test things- I streamline, debug, and document the hell out of them. I build weird little tools and games for fun (and sometimes usefulness), and I’m especially good at catching edge cases before they set anything on fire. You want fast feedback and clean documentation? I'm your girl.
-    </p>
+    <div class="about-content">
+      <div class="about-text">
+        <p><strong>Hi, I'm Lauren!</strong> I'm a seasoned QA Engineer with <strong>10+ years</strong> of experience ensuring software quality across web, mobile, and desktop applications. I specialize in both meticulous manual testing and building robust automated test suites, always eager to integrate new tech (like AI) to keep testing efficient and effective.</p>
+        <p>By day I’m hunting bugs and streamlining processes; by night I’m coding quirky web tools and indie games. This blend of rigor and creativity gives me a unique perspective on problem-solving. I love delivering quality software and making the development process smoother for everyone.</p>
+        <p>Outside of work, you might find me riding a roller coaster or crafting the perfect cocktail (yes, I moonlight as a bartender!). These passions keep my life (and my approach to tech) fun and energized. I'm currently open to new opportunities and freelance projects where I can help teams <strong>ship with confidence</strong> – and maybe add a bit of fun along the way.</p>
+      </div>
+      <div class="about-image">
+        <!-- Placeholder for profile picture -->
+        <img src="images/profile.jpg" alt="Lauren Leppert portrait">
+      </div>
+    </div>
   </section>
 
+  <!-- Services Section -->
+  <section id="services">
+    <h2>What I Do</h2>
+    <div class="services-list">
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-bug"></i></div>
+        <h3>QA &amp; Test Automation</h3>
+        <p>Manual and automated testing, writing test scripts, integrating tests into CI/CD pipelines; ensuring every release is rock-solid and bug-free.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>Web Development &amp; Tools</h3>
+        <p>Building quirky web apps and tools (and games!) that showcase creative problem-solving and full-stack development skills, from concept to deployment.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-robot"></i></div>
+        <h3>AI Integration</h3>
+        <p>Leveraging AI/ML (like GPT) to enhance testing and development - from intelligent test case generation to smart automation that keeps projects on the cutting edge.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-pencil-alt"></i></div>
+        <h3>Technical Writing</h3>
+        <p>Creating clear documentation, tutorials, and guides. I translate complex technical information into accessible content for teams and end-users alike.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
   <section id="projects">
-    <h2>What I'm Working On</h2>
-    <div class="project">
-      <h3>🎢 QueueQuest</h3>
-      <p>A browser-based game that gamifies amusement park exploration an d wait times with mini-games and fun challenges. Built with HTML/CSS/JS and pure nerd energy.</p>
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <!-- Project 1 -->
+      <div class="project">
+        <h3>QueueQuest (In Progress)</h3>
+        <p class="project-description">A gamified theme park adventure that turns waiting in line into a game. <em>Built with HTML, CSS &amp; JS</em> – an in-browser amusement park experience.</p>
+        <!-- Demo placeholder (could be an embedded iframe or canvas in future) -->
+        <!--<div class="project-demo">[Interactive demo placeholder]</div>
+        <p class="project-links">
+          <a href="#">View Project</a> | <a href="#">GitHub Repo</a> -->
+        </p>
+      </div>
+      <!-- Project 2
+      <div class="project">
+        <h3>DropDice</h3>
+        <p class="project-description">A dice game with custom rules <em>Built with Unity/WebGL</em> to bring a bit of randomness and fun online.</p>
+        <div class="project-demo">[Interactive demo placeholder]</div>
+        <p class="project-links">
+          <a href="#">View Project</a> | <a href="#">GitHub Repo</a>
+        </p>
+      </div> -->
+      <!-- Project 3 -->
+      <div class="project">
+        <h3>Layover Launcher <small>(In Progress)</small></h3>
+        <p class="project-description">A travel-hack web app for finding flights with dream layovers. Plan adventures on the way to your destination. <em>Currently in development</em> – focusing on search algorithms and API integrations.</p>
+        <!--<div class="project-demo">[Screenshot placeholder]</div>
+        <p class="project-links">
+          <a href="#">GitHub Repo</a> -->
+        </p>
+      </div>
     </div>
-    <div class="project">
-      <h3>🛫 Layover Launcher</h3>
-      <p>Find budget flights with long layovers near custom destination points. Perfect for travel hackers and the wanderlust smitten. Currently in development with a focus on JSON-based input and output matching.</p>
-    </div>
   </section>
 
-  <section id="freelance">
-    <h2>Freelance Work</h2>
-    <p>
-      Currently open to freelance and contract work for QA projects—manual or automation. Whether you're looking to build your first suite or clean up a flaky one, I’ve got you covered. I can jump in, get up to speed fast, and document with meticulous detail.
-    </p>
-    <p>
-      Let's talk if you need a tester who finds weird bugs, writes clean test cases, and won't ghost you after one sprint.
-    </p>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="https://docs.google.com/document/d/1fbRdceWWWVlKwTHG1xNt2DDtttnyzCPM3IRZrgAZk-g/edit?usp=sharing" target="_blank">Download My Resume</a></p>
-  </section>
-
+  <!-- Contact Section -->
   <section id="contact">
-    <h2>Get In Touch</h2>
-    <p>Email: <a href="mailto:lepperlm@gmail.com">lepperlm@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/lauren-leppert-QA" target="_blank">linkedin.com/in/lauren-leppert-qa</a></p>
-    <p>GitHub: <a href="https://github.com/laurenleppert" target="_blank">github.com/laurenleppert</a></p>
+    <h2>Contact</h2>
+    <p>If you'd like to work together or just say hello, drop me a message below or connect with me on <a href="https://www.linkedin.com/in/lauren-leppert-qa" target="_blank" rel="noopener">LinkedIn</a>!</p>
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <form id="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+      <!-- Direct Contact Info -->
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:Lepperlm@gmail.com">Lepperlm@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lauren-leppert-qa" target="_blank" rel="noopener">linkedin.com/in/lauren-leppert-qa</a></p>
+        <!--<p><strong>GitHub:</strong> <a href="https://github.com/USERNAME" target="_blank" rel="noopener">github.com/USERNAME</a></p>-->
+      </div>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Lauren Leppert. Built with caffeine and questionable decisions.</p>
+    <p>&copy; <span id="current-year"></span> Lauren Leppert. Built with caffeine and questionable decisions.</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
